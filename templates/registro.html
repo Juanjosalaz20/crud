@@ -9,11 +9,22 @@
 <body>
     <div class="section">
         <form method="post">
-            <input type="text" name="nombre" placeholder="ingrese su nombre">
-            <input type="email" name="email" placeholder="ingrese su email">
-            <button type="submit">Registrar usuario</button>
+            <input type="text" name="nombre" placeholder="ingrese su nombre" required> 
+            <input type="email" name="email" placeholder="ingrese su email" required>
+            <button class="botonenviar" type="submit">Registrar usuario</button>
         </form>
+            <table>
+                <tr> <th>id usuario</th> <th>nombre del usuario </th> <th>correo del usuario</th> <th>Accion </th> </tr>
+                {% for persona in usuarios %}
+                    <tr>
+                        <td>{{persona.id}} </td>
+                        <td>{{persona.username}} </td>
+                        <td>{{persona.email}} </td>
+                        <td> <button class="botonborrar"><a href="/?borrar={{persona.id}}">Eliminar</a></button> </td>
+                    </tr>
+                {%endfor%}
+            </table>
+            
     </div>
-    {{ usuarios }}
 </body>
 </html>

@@ -24,7 +24,7 @@ form input{
     border-radius: 30px;
 }
 
-button{
+.botonenviar{
     padding: 10px;
     background-color: rgb(193, 214, 232);
     margin-top: 15px;
@@ -32,4 +32,25 @@ button{
     border: none;
     color: rgb(134, 134, 228);
     cursor: pointer;
+}
+
+table, th{
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.botonborrar{
+    padding: 10px;
+    background-color: rgb(193, 214, 232);
+    border-radius: 30px;
+    border: none;
+    color: rgb(134, 134, 228);
+    cursor: pointer;
+    margin-inline: ;
 }
